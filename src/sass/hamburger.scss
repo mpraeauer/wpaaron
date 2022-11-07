@@ -1,0 +1,59 @@
+@include breakpoint($desktop){
+    #hamburger {
+        visibility: hidden;
+      }
+}
+
+@include breakpoint(0, $mobile) {   
+    #hamburger {
+        width: 24px;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        border: none;
+        background-color: transparent;
+        z-index: 999;
+        height: 50px;
+
+        &.hover{
+            cursor: pointer;
+        }
+
+        .line-1{
+            top: 0;
+            background-color: #F4A76C;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            right:1px;
+            transition: transform .5s ease;
+        }
+        .line-3{
+            top: 9px;
+            background-color: #F4A76C;
+            width: 60%;
+            height: 1px;
+            position: absolute;
+            right: 1px;
+            transition: transform .5s ease;
+        }
+
+        &.open{
+            .line-1 {
+                transform: rotate(45deg);
+                transform-origin: 0 0;
+            }
+            .line-3{
+                transform: rotate(-45deg) translate(11px, 5px); 
+                transform-origin: 9px 21px;
+                width: 100%;
+            }
+        }
+   
+        &.closed + ul{
+            transform: translateX(100%);
+            transition: transform 0.6s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+    }
+}
+

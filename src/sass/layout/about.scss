@@ -1,0 +1,113 @@
+@include breakpoint($desktop) {
+
+    #about {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        background-color: #FFF7F2;
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+
+
+        img {
+            object-fit: cover;
+            width: 45%;
+        }
+
+        .metext {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            padding-left: 3vh;
+            padding-bottom: 3vh;
+
+            p {
+                margin-top: 3vh;
+                align-items: center;
+                justify-content: center;
+                width: 70%;
+                line-height: 1.6rem;
+                padding-left: 0;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px;
+                height: 34px;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                // margin-left: 15px;
+                margin-top: 4vh;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: black;
+                border: 1px solid #FFAD6E;
+                ;
+                padding: 0;
+            }
+
+            h2 {
+                padding-left: 0;
+            }
+        }
+    }
+
+}
+
+@include breakpoint(0, $mobile) {
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        background-color: #FFF7F2;
+        padding-top: 7vh;
+        padding-bottom: 7vh;
+
+
+        img {
+            display: flex;
+            width: 100%;
+        }
+
+        .metext {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            p {
+                margin-top: 1.5vh;
+                align-items: center;
+                justify-content: center;
+                width: 85%;
+                line-height: 1.8rem;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 120px;
+                height: 34px;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                margin-left: 15px;
+                margin-top: 4vh;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: black;
+                border: 1px solid #FFAD6E;
+                ;
+                padding: 0;
+            }
+        }
+    }
+}

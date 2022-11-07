@@ -1,0 +1,114 @@
+@include breakpoint($desktop){
+
+    header {
+        background-image: url("../images/dance_two_man_desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: flex;
+        flex-direction: column;
+        background-position: 50% 0;
+        height: 80vh;
+        padding-top: 1%;
+    
+        .box {
+            position: relative;
+            margin-left: 8%;
+            margin-top: 13%;
+
+            h2 { 
+                margin-bottom: 4vh;
+            }
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 160px;
+                height: 40px;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                margin-left: 15px;
+                margin-top: 4vh;
+                text-decoration: none;   
+                text-transform: uppercase;
+                color: white;
+                border: 0.5px solid #FFAD6E;
+                padding: 0;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            margin-right: 25px;
+            gap: 40px;
+            margin-top: -35px;
+          }
+          li a {
+            color: #FFAD6E;
+            margin: 20px 0px 20px 0px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-bottom: 0.5px solid #FFAD6E;
+            font-size: 16px;
+            font-weight: 200;
+          }
+      }
+
+}
+
+@include breakpoint(0,$mobile){
+    
+    header {
+        background-image: url("../images/dance_two_man.jpg");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        display: flex;
+        flex-direction: column;
+        background-position: 50% 0;
+        height:430px;
+    
+        .box {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content:end;
+          align-items:flex-end;
+          padding-top: 0px;
+          height: 100%;
+          width: 100%;
+          padding-bottom: 50px;
+        }
+        #maintitle{
+            display: flex;
+            flex-direction: column;
+            width: 55%;
+
+            h2 {
+                padding-left: 0;
+                line-height: 30px;
+            }
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 145px;
+                height: 40px;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                margin-top: 4vh;
+                text-decoration: none;   
+                text-transform: uppercase;
+                color: white;
+                border: 0.5px solid #FFAD6E;
+                padding: 0;
+            }
+        }
+    }  
+}

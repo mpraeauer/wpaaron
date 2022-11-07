@@ -1,0 +1,118 @@
+@include breakpoint($desktop) {
+  //--- GENERAL ---
+  body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+
+    //--- FONTS ---
+    p,
+    blockquote,
+    h1,
+    h2,
+    h3,
+    .super-headline {
+      padding-left: 15px;
+    }
+    h1 {
+      padding-left: 25px;
+      padding-top: 15px;
+      color: white;
+      font-size: 16px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-style: normal;
+      font-weight: 200;
+      text-decoration: none;
+
+      #uppercase {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+    h2 {
+      color: #F4A76C;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 45px;
+    }
+    h3 {
+      color: #F4A76C;
+      margin-bottom: 15px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 24px;
+    }
+    .super-headline {
+      color: #363636;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+    }
+  }
+}
+
+@include breakpoint(0,$mobile)  {
+
+  //--- GENERAL ---
+  body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+
+    //--- FONTS ---
+    p,
+    blockquote,
+    h1,
+    h2,
+    h3,
+    .super-headline {
+      padding-left: 15px;
+    }
+    h1 {
+      padding-top: 15px;
+      color: white;
+      font-size: 14px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-style: normal;
+      font-weight: 200;
+
+      #uppercase {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+    h2 {
+      color: #F4A76C;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 28px;
+    }
+    h3 {
+      color: #F4A76C;
+      margin-bottom: 15px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+    }
+    .super-headline {
+      color: #363636;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+    }
+  }
+}

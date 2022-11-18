@@ -1,22 +1,15 @@
 <?php
 namespace Deployer;
+require 'recipe/wordpress.php';
 
-require 'recipe/common.php';
-
-set('repository','https://github.com/mpraeauer/wpaaron_Konstantin_Marlene');
-
-
+set('repository','git@github.com:mpraeauer/wpaaron_Konstantin_Marlene.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-//set('git_tty', true);
-
-
-
+set('git_tty', true);
 // Shared files/dirs between deploys
-set('shared_files', ['public/wp-config.php']);
+
+set('shared_files', ['public/wp-config.php', 'public/.htaccess']);
 set('shared_dirs', ['public/wp-content/uploads']);
-
-
 
 // Writable dirs by web server
 // set('writable_mode', 'chown');
@@ -26,20 +19,16 @@ set('allow_anonymous_stats', false);
 
 
 // Hosts
-host('193.170.119.200')
+host('vm-copper.multimediatechnology.at')
         ->set('remote_user','admin')
-        ->set('become', 'root')
+        //->set('remote_user','aaron')
+        // ->set('become', 'root')
         ->set('port','5412')
         ->set('deploy_path', '/home/admin/aaron');
-
-
-
+        //->set('deploy_path', '~/app');
 
 // Composer
-//set('composer_action', false);
-
-
-
+set('composer_action', false);
 
 // Tasks
 desc('Deploy your project');
@@ -54,6 +43,7 @@ task('deploy', [
     'deploy:clear_paths',
     'deploy:symlink',
     'deploy:unlock',
+    // 'deploy:publish'
 ]);
 
 

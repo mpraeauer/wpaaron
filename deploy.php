@@ -1,14 +1,14 @@
 <?php
 namespace Deployer;
 
-require 'recipe/wordpress.php';
+require 'recipe/common.php';
 
 set('repository','https://github.com/mpraeauer/wpaaron_Konstantin_Marlene');
 
 
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true);
+//set('git_tty', true);
 
 
 
@@ -36,7 +36,7 @@ host('193.170.119.200')
 
 
 // Composer
-set('composer_action', false);
+//set('composer_action', false);
 
 
 

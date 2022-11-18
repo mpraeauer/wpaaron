@@ -1,0 +1,1 @@
+(()=>{var s=document.querySelector("#hamburger");function e(){s.classList.contains("closed")?(s.classList.remove("closed"),s.classList.add("open")):(s.classList.remove("open"),s.classList.add("closed"))}s.addEventListener("click",e);})();

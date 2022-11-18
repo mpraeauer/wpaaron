@@ -22,7 +22,7 @@ set('allow_anonymous_stats', false);
 host('vm-copper.multimediatechnology.at')
         ->set('remote_user','admin')
         //->set('remote_user','aaron')
-        // ->set('become', 'root')
+         ->set('become', 'root')
         ->set('port','5412')
         ->set('deploy_path', '/home/admin/aaron');
         //->set('deploy_path', '~/app');

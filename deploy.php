@@ -24,7 +24,7 @@ host('vm-copper.multimediatechnology.at')
         //->set('remote_user','aaron')
         // ->set('become', 'root')
         ->set('port','5412')
-        ->set('deploy_path', '/home/admin/aaron');
+        ->set('deploy_path', '/home/admin/aaron/app/');
         //->set('deploy_path', '~/app');
 
 // Composer

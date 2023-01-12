@@ -19,12 +19,12 @@ set('shared_dirs', ['public/wp-content/uploads']);
 
 
 // Hosts
-host('vm-copper.multimediatechnology.at')
-        ->set('remote_user','admin')
+host('88.198.150.108')
+        ->set('remote_user','aaron')
         //->set('remote_user','aaron')
         // ->set('become', 'root')
         ->set('port','5412')
-        ->set('deploy_path', '/home/admin/aaron/app/');
+        ->set('deploy_path', '/var/www/aaron');
         //->set('deploy_path', '~/app');
 
 // Composer

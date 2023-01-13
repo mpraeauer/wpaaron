@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    ServerName vm-copper.multimediatechnology.at
+    ServerAlias www.vm-copper.multimediatechnology.at
+   
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/aaron/current/public
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+   
+    <Directory /home/admin/aaron>
+        AllowOverride All
+    </Directory>
+</VirtualHost>
+
+

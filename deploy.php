@@ -12,8 +12,8 @@ set('shared_files', ['public/wp-config.php', 'public/.htaccess']);
 set('shared_dirs', ['public/wp-content/uploads']);
 
 // Writable dirs by web server
-// set('writable_mode', 'chown');
-// set('writable_dirs', ['public/wp-content/uploads']);
+ set('writable_mode', 'chown');
+ set('writable_dirs', ['public/wp-content/uploads']);
 //set('allow_anonymous_stats', false);
 
 
@@ -29,6 +29,14 @@ host('193.170.119.200')
 
 // Composer
 set('composer_action', false);
+task('post-deploy', function () {
+    
+        run('sudo chown -R admin:www-data /var/www/aaron');
+        run('sudo chmod -R u+rwx /var/www/aaron');
+        set('writable_mode', 'chown');
+        set('writable_dirs', ['public/wp-content/uploads']);
+      });
+
 
 // Tasks
 desc('Deploy your project');
@@ -47,6 +55,9 @@ task('deploy', [
 ]);
 
 
-
+task('delete_src_folder', function () {
+        run('rm -rf {{release_path}}/src');
+    });
 // [Optional] If deploy fails automatically unlock.
+after('deploy', 'delete_src_folder');
 after('deploy:failed', 'deploy:unlock');
